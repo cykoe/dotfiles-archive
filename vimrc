@@ -35,6 +35,8 @@ set foldmethod=indent
 set foldlevel=99
 
 let g:SimpylFold_docstring_preview=1
+let g:move_map_keys = 0
+
 
 "----------------------------------------------------------
 " Plugins (Vundle)
@@ -53,8 +55,6 @@ Plugin 'vim-python/python-syntax'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
-
-
 
 call vundle#end()
 
@@ -78,6 +78,8 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 map <C-\> :NERDTreeToggle<CR>
 
+vmap <C-Down> <Plug>MoveBlockDown
+vmap <C-Up> <Plug>MoveBlockUp
 nmap <C-Up> <Plug>MoveLineUp
 nmap <C-Right> <Plug>MoveLineRight
 nmap <C-Left> <Plug>MoveLineLeft
