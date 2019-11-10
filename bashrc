@@ -60,9 +60,9 @@ parse_git_branch() {
 }
 
 if [ "$color_prompt" = yes ]; then
-	PS1='\[\033[01;34m\]\W\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\n\$ '
+	PS1='\[\033[01;36m\]\W\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\n🔥 '
 else
-	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\n\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w🔥$(parse_git_branch)\n\$ '
 fi
 
 unset color_prompt force_color_prompt
@@ -101,6 +101,7 @@ alias nt='npm test'
 alias nst='npm start'
 alias py='python3.6'
 alias se='source venv/bin/activate'
+alias e='vim'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
