@@ -60,7 +60,7 @@ parse_git_branch() {
 }
 
 if [ "$color_prompt" = yes ]; then
-	PS1='\[\033[01;36m\]\W\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\n🔥 '
+	PS1='\[\033[01;36m\]\W\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\n$ '
 else
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w🔥$(parse_git_branch)\n\$ '
 fi
@@ -100,6 +100,7 @@ alias zblit='cd /mnt/c/Users/charlie/Documents/zblit/'
 alias nt='npm test'
 alias nst='npm start'
 alias py='python3.6'
+alias jn='jupyter notebook --no-browser'
 alias se='source venv/bin/activate'
 alias e='vim'
 
@@ -146,3 +147,6 @@ export DISPLAY=:0
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /mnt/c/Users/charlie/Documents/work/PricingApi_4592Git/node_modules/tabtab/.completions/sls.bash ] && . /mnt/c/Users/charlie/Documents/work/PricingApi_4592Git/node_modules/tabtab/.completions/sls.bash
+
+alias o="explorer.exe ."
+

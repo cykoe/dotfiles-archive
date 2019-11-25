@@ -21,9 +21,17 @@ set hlsearch
 set ignorecase
 set smartcase
 set autoindent
-
+set showcmd
+set noswapfile
+set nobackup
+set nowritebackup
+set history=50
+set ruler
 set confirm
-
+set tabstop=2
+set shiftwidth=2
+set shiftround
+set expandtab
 " line number
 set number
 
@@ -40,6 +48,7 @@ let g:move_map_keys = 0
 
 "----------------------------------------------------------
 " Plugins (Vundle)
+
 "
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -48,6 +57,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'matze/vim-move'
 Plugin 'morhetz/gruvbox'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'valloric/youcompleteme'
@@ -55,6 +65,8 @@ Plugin 'vim-python/python-syntax'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'vimwiki/vimwiki'
+
 
 call vundle#end()
 
@@ -66,13 +78,13 @@ call vundle#end()
 nnoremap <C-]> <Nop>
 nnoremap <C-]> zM 
 nnoremap <space> za
-nnoremap <C-J> <C-W><C-J>
+nnoremap <A-Down> <C-W><C-J>
 
-noremap <C-K> <C-W><C-K>
+noremap <A-Up> <C-W><C-K>
 
-nnoremap <C-L> <C-W><C-L>
+nnoremap <A-Right> <C-W><C-L>
 
-nnoremap <C-H> <C-W><C-H>
+nnoremap <A-Left> <C-W><C-H>
 
 nnoremap <C-L> :nohl<CR><C-L>
 
@@ -84,6 +96,9 @@ nmap <C-Up> <Plug>MoveLineUp
 nmap <C-Right> <Plug>MoveLineRight
 nmap <C-Left> <Plug>MoveLineLeft
 nmap <C-Down> <Plug>MoveLineDown
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
 
 
 "---------------------------------------------------------
