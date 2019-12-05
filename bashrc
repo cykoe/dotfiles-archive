@@ -58,9 +58,21 @@ fi
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-
+# Black	0;30
+# Blue	0;34
+# Green	0;32
+# Cyan	0;36
+# Red	0;31
+# Purple	0;35
+# Brown	0;33
+# Blue	0;34
+# Green	0;32
+# Cyan	0;36
+# Red	0;31
+# Purple	0;35
+# Brown	0;33
 if [ "$color_prompt" = yes ]; then
-	PS1='\[\033[01;36m\]\W\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\n$ '
+	PS1='\[\033[01;35m\][\d] \[\033[01;36m\]\w\[\033[01;31m\] $(parse_git_branch)\[\033[01;32m\033[00m\]\n🔥 '
 else
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w🔥$(parse_git_branch)\n\$ '
 fi
@@ -76,38 +88,8 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-#if [ -x /usr/bin/dircolors ]; then
-#    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-#    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-#    alias grep='grep --color=auto'
-#    alias fgrep='fgrep --color=auto'
-#    alias egrep='egrep --color=auto'
-#fi
-
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias doc='cd /mnt/c/Users/charlie/Documents/'
-alias zblit='cd /mnt/c/Users/charlie/Documents/zblit/'
-alias nt='npm test'
-alias nst='npm start'
-alias py='python3.6'
-alias jn='jupyter notebook --no-browser'
-alias se='source venv/bin/activate'
-alias e='vim'
-
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -148,5 +130,6 @@ export DISPLAY=:0
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /mnt/c/Users/charlie/Documents/work/PricingApi_4592Git/node_modules/tabtab/.completions/sls.bash ] && . /mnt/c/Users/charlie/Documents/work/PricingApi_4592Git/node_modules/tabtab/.completions/sls.bash
 
-alias o="explorer.exe ."
-
+# ctrl + s save for vim
+bind -r '\C-s'
+stty -ixon
