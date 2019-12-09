@@ -32,6 +32,7 @@ set tabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
+set completeopt-=preview
 " line number
 set number
 set laststatus=2
@@ -46,10 +47,10 @@ set foldlevel=99
 
 let g:SimpylFold_docstring_preview=1
 let g:move_map_keys = 0
-let g:vimwiki_list = [{'path': '/mnt/c/Users/charlie/Documents/notes/',
+let g:vimwiki_list = [{
+  \'path': '/mnt/c/Users/charlie/Documents/notes/',
   \ 'syntax': 'markdown', 
-  \ 'path_html': '/mnt/c/Users/charlie/Documents/',
-  \ 'ext': '.md', 'custom_wiki2html': '/home/mint/wiki2html.sh'}] 
+  \ 'ext': '.md'}] 
 
 
 "----------------------------------------------------------
@@ -67,6 +68,9 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'valloric/youcompleteme'
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+Plugin 'google/vim-glaive'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
 Plugin 'vim-python/python-syntax'
@@ -112,6 +116,19 @@ nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --excl
 set pastetoggle=<F2>
 set showmode
 
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType gn AutoFormatBuffer gn
+  autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer yapf
+  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType rust AutoFormatBuffer rustfmt
+  autocmd FileType vue AutoFormatBuffer prettier
+augroup END
 
 "---------------------------------------------------------
 " Themes
