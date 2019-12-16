@@ -39,7 +39,7 @@ set number
 set linebreak
 
 let g:python_highlight_all = 1
-let g:airline_theme='papercolor'
+let g:airline_theme='violet'
 let g:airline_powerline_fonts = 1
 let g:ycm_key_list_stop_completion = ['<TAB>']
 let g:ycm_key_list_select_completion = ['<Down>']
@@ -78,6 +78,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'matze/vim-move'
 Plugin 'morhetz/gruvbox'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdcommenter'
@@ -122,10 +123,6 @@ nmap <C-Down> <Plug>MoveLineDown
 nnoremap <F2> :set invpaste paste?<CR>
 inoremap <C-s> <esc>:w<cr>
 nnoremap <C-s> :w<cr>
-nnoremap j k
-nnoremap k j
-nnoremap l h
-nnoremap ; l
 
 " fzf file fuzzy search that respects .gitignore
 " If in git directory, show only files that are committed, staged, or unstaged
