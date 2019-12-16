@@ -6,6 +6,7 @@ set nocompatible
 
 " attempt to determine the type of a file based on its name
 " allow intelligent auto-indenting for each filetype
+"
 filetype plugin indent on
 
 " enable syntax highlighting
@@ -39,8 +40,10 @@ set linebreak
 
 let g:python_highlight_all = 1
 let g:airline_theme='papercolor'
-let g:airline_section_b='%{strftime("%c")}'
 let g:airline_powerline_fonts = 1
+let g:ycm_key_list_stop_completion = ['<TAB>']
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
 " fold indent functions
 set foldmethod=indent
 
@@ -104,6 +107,8 @@ call vundle#end()
 nnoremap <C-]> <Nop>
 nnoremap <C-]> zM 
 nnoremap <space> za
+nnoremap <C-space> i
+imap <C-space> <Esc>
 
 nnoremap <C-L> :nohl<CR><C-L>
 map <C-\> :NERDTreeToggle<CR>
