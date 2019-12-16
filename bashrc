@@ -40,6 +40,10 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
+# set colors for directory
+LS_COLORS='ow=04;31;40'
+export LS_COLORS
+
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -72,9 +76,9 @@ parse_git_branch() {
 # Purple	0;35
 # Brown	0;33
 if [ "$color_prompt" = yes ]; then
-	PS1='\[\e[01;31m\][\t \d] \[\e[01;36m\]\w\[\e[01;31m\] $(parse_git_branch)\[\e[01;32m\033[00m\]\n$ '
+  PS1='\[\e[01;31m\][\t \d] \[\e[01;36m\]\w\[\e[01;31m\] $(parse_git_branch)\[\e[01;32m\033[00m\]\n$ '
 else
-	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w🔥$(parse_git_branch)\n\$ '
+  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w🔥$(parse_git_branch)\n\$ '
 fi
 
 unset color_prompt force_color_prompt
@@ -119,7 +123,7 @@ export DOCKER_MACHINE_NAME=docker-host
 export COMPOSE_CONVERT_WINDOWS_PATHS= true
 export PATH=$PATH:/home/mint/.local/bin
 export TESSDATA_PREFIX="/usr/local/share/tessdata"
-export DISPLAY=:0
+export DISPLAY=localhost:0.0
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -133,3 +137,11 @@ export DISPLAY=:0
 # ctrl + s save for vim
 bind -r '\C-s'
 stty -ixon
+#GOPATH=$HOME/go
+#function _update_ps1() {
+    #PS1="$($GOPATH/bin/powerline-go -error $?)\n$ "
+#}
+
+#if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+    #PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi

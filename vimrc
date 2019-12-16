@@ -35,18 +35,22 @@ set expandtab
 set completeopt-=preview
 " line number
 set number
-set laststatus=2
 set linebreak
 
 let g:python_highlight_all = 1
-
+let g:airline_theme='papercolor'
+let g:airline_section_b='%{strftime("%c")}'
+let g:airline_powerline_fonts = 1
 " fold indent functions
 set foldmethod=indent
 
 set foldlevel=99
+set clipboard=unnamed
 
 let g:SimpylFold_docstring_preview=1
 let g:move_map_keys = 0
+
+" vimwiki setup
 let g:vimwiki_list = [{
   \'path': '/mnt/c/Users/charlie/Documents/notes/',
   \ 'syntax': 'markdown', 
@@ -62,23 +66,28 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'matze/vim-move'
 Plugin 'morhetz/gruvbox'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'valloric/youcompleteme'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
 Plugin 'google/vim-glaive'
+Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/fzf'
 Plugin 'vim-python/python-syntax'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vimwiki/vimwiki'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'itchyny/lightline.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()
 
@@ -90,7 +99,6 @@ call vundle#end()
 nnoremap <C-]> <Nop>
 nnoremap <C-]> zM 
 nnoremap <space> za
-nnoremap <A-Down> <C-W><C-J>
 
 noremap <A-Up> <C-W><C-K>
 nnoremap <A-Right> <C-W><C-L>
