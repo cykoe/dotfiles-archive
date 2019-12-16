@@ -20,4 +20,4 @@ alias rm='rm -I --preserve-root'
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
- 
+alias g='git' 

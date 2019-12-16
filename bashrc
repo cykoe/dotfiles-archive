@@ -130,9 +130,6 @@ export DISPLAY=localhost:0.0
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [ -f /usr/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /usr/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /mnt/c/Users/charlie/Documents/work/PricingApi_4592Git/node_modules/tabtab/.completions/sls.bash ] && . /mnt/c/Users/charlie/Documents/work/PricingApi_4592Git/node_modules/tabtab/.completions/sls.bash
 
 # ctrl + s save for vim
 bind -r '\C-s'
