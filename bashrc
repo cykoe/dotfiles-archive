@@ -41,7 +41,7 @@ case "$TERM" in
 esac
 
 # set colors for directory
-LS_COLORS='ow=04;31;40'
+LS_COLORS='ow=04;31;40:fi=00;33'
 export LS_COLORS
 
 # uncomment for a colored prompt, if the terminal has the capability; turned

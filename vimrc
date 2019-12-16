@@ -56,6 +56,11 @@ let g:vimwiki_list = [{
   \ 'syntax': 'markdown', 
   \ 'ext': '.md'}] 
 
+if &term =~ '256color'
+    " Disable Background Color Erase (BCE) so that color schemes
+    " work properly when Vim is used inside tmux and GNU screen.
+    set t_ut=
+endif
 
 "----------------------------------------------------------
 " Plugins (Vundle)
@@ -100,9 +105,6 @@ nnoremap <C-]> <Nop>
 nnoremap <C-]> zM 
 nnoremap <space> za
 
-noremap <A-Up> <C-W><C-K>
-nnoremap <A-Right> <C-W><C-L>
-nnoremap <A-Left> <C-W><C-H>
 nnoremap <C-L> :nohl<CR><C-L>
 map <C-\> :NERDTreeToggle<CR>
 
@@ -115,6 +117,10 @@ nmap <C-Down> <Plug>MoveLineDown
 nnoremap <F2> :set invpaste paste?<CR>
 inoremap <C-s> <esc>:w<cr>
 nnoremap <C-s> :w<cr>
+nnoremap j k
+nnoremap k j
+nnoremap l h
+nnoremap ; l
 
 " fzf file fuzzy search that respects .gitignore
 " If in git directory, show only files that are committed, staged, or unstaged
@@ -143,6 +149,5 @@ augroup END
 " Themes
 
 " Dark
-let g:material_style='oceanic'
 set background=dark
 colorscheme gruvbox 
