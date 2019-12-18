@@ -39,7 +39,7 @@ set number
 set linebreak
 
 let g:python_highlight_all = 1
-let g:airline_theme='violet'
+let g:airline_theme='solarized_flood'
 let g:airline_powerline_fonts = 1
 let g:ycm_key_list_stop_completion = ['<TAB>']
 let g:ycm_key_list_select_completion = ['<Down>']
@@ -75,8 +75,10 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'dense-analysis/ale'
 Plugin 'matze/vim-move'
 Plugin 'morhetz/gruvbox'
+Plugin 'mattn/emmet-vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-syntastic/syntastic'
