@@ -39,7 +39,7 @@ set number
 set linebreak
 
 let g:python_highlight_all = 1
-let g:airline_theme='solarized_flood'
+let g:airline_theme='cool'
 let g:airline_powerline_fonts = 1
 let g:ycm_key_list_stop_completion = ['<TAB>']
 let g:ycm_key_list_select_completion = ['<Down>']
@@ -52,6 +52,11 @@ set clipboard=unnamed
 
 let g:SimpylFold_docstring_preview=1
 let g:move_map_keys = 0
+let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_sign_error = '🔥'
+let g:ale_sign_warning = '⚡'
+let g:ale_fix_on_save = 1
+
 
 " vimwiki setup
 let g:vimwiki_list = [{
@@ -110,8 +115,11 @@ call vundle#end()
 nnoremap <C-]> <Nop>
 nnoremap <C-]> zM 
 nnoremap <space> za
-nnoremap <C-space> i
-imap <C-space> <Esc>
+nnoremap i k
+nnoremap k j
+nnoremap j h
+nnoremap <C-@> i
+inoremap <C-space> <Esc>
 
 nnoremap <C-L> :nohl<CR><C-L>
 map <C-\> :NERDTreeToggle<CR>
