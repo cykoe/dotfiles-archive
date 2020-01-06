@@ -2,7 +2,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 
-files="bashrc bash_aliases vimrc"    # list of files/folders to symlink in homedir
+files="bashrc bash_aliases vimrc gitconfig"    # list of files/folders to symlink in homedir
 
 # change to the dotfiles directory
 

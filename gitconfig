@@ -1,0 +1,19 @@
+[user]
+	name = sircharlie
+	email = esculin.hao@gmail.com
+[core]
+	filemode = false
+	editor = vim
+	autocrlf = input
+[credential]
+	canFallBackToInsecureStore = true
+	helper = store
+[alias]
+	ci = commit
+	amend = commit --amend
+	co = checkout
+	br = branch
+	st = status
+	lo = log --oneline
+  p = pull
+  pp = push

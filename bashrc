@@ -115,7 +115,7 @@ export DOCKER_TLS_VERIFY=1
 export DOCKER_CERT_PATH=/mnt/c/users/charlie/.docker/machine/machines/docker-host
 export DOCKER_MACHINE_NAME=docker-host
 export COMPOSE_CONVERT_WINDOWS_PATHS= true
-export PATH=$PATH:/home/mint/.local/bin
+export PATH=$PATH:/home/mint/.local/bin:/usr/local/go/bin
 export TESSDATA_PREFIX="/usr/local/share/tessdata"
 export DISPLAY=localhost:0.0
 

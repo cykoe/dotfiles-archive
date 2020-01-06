@@ -115,11 +115,6 @@ call vundle#end()
 nnoremap <C-]> <Nop>
 nnoremap <C-]> zM 
 nnoremap <space> za
-nnoremap i k
-nnoremap k j
-nnoremap j h
-nnoremap <C-@> i
-inoremap <C-space> <Esc>
 
 nnoremap <C-L> :nohl<CR><C-L>
 map <C-\> :NERDTreeToggle<CR>
