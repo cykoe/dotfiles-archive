@@ -107,6 +107,11 @@ Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()
 
+call glaive#Install()
+
+Glaive codefmt plugin[mappings]
+Glaive codefmt google_java_executable="java -jar /mnt/c/Users/charlie/Downloads/google-java-format-1.7-all-deps.jar"
+
 "----------------------------------------------------------
 " Mappings
 "
