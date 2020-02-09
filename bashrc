@@ -128,11 +128,3 @@ export DISPLAY=localhost:0.0
 # ctrl + s save for vim
 bind -r '\C-s'
 stty -ixon
-#GOPATH=$HOME/go
-#function _update_ps1() {
-    #PS1="$($GOPATH/bin/powerline-go -error $?)\n$ "
-#}
-
-#if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-    #PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi
