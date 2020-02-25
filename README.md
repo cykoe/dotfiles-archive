@@ -1,6 +1,15 @@
-## Configuration files for bash, intelliJ, vim, and git
+Getting Started
+---------------------------
+Install RCM:
 
-This repo contains my personal configuration files for bash, intelliJ, vim, and git.
+The rcm suite of tools is for managing dotfiles directories.
 
-All of these configs are optimized for maximum keyboard usage and almost to none usage of mouse/trackpad.
+[Github Link](https://github.com/thoughtbot/rcm)
 
+Then run:
+```
+# Use exclusion pattern to ignore README.md symlink to be created in your home directory
+rcup -v -x README.md
+```
+
+For more, you can checkout [here](http://thoughtbot.github.io/rcm/rcm.7.html)

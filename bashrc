@@ -128,3 +128,5 @@ export DISPLAY=localhost:0.0
 # ctrl + s save for vim
 bind -r '\C-s'
 stty -ixon
+
+# Testing
